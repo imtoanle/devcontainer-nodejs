@@ -1,7 +1,10 @@
 {
 	"name": "Node.js",
 	"build": {
-		"dockerfile": "Dockerfile"
+		"dockerfile": "Dockerfile",
+		"args": {
+			"VARIANT": "20.15.1-bookworm"
+		}
 	},
 	"features": {
 		"ghcr.io/devcontainers/features/common-utils:2": {
@@ -26,7 +29,7 @@
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+	"forwardPorts": [3000, 8080],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "yarn install",
