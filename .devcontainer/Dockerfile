@@ -1,4 +1,4 @@
-ARG VARIANT=22-bookworm
+ARG VARIANT=22.14-bookworm
 FROM node:${VARIANT}
 
 ARG USERNAME=node
@@ -26,7 +26,7 @@ RUN apt-get update && apt-get install -y lsb-release
 # Install psql 16
 RUN echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list
 RUN curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc | gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
-RUN apt-get update && apt-get install -y postgresql-client-16 tmux git
+RUN apt-get update && apt-get install -y postgresql-client-16 tmux git vim
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
