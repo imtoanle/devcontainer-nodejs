@@ -1,7 +1,7 @@
 ARG VARIANT=22.14-bookworm
 FROM node:${VARIANT}
 
-ARG USERNAME=node
+ARG USERNAME=root
 ARG NPM_GLOBAL=/usr/local/share/npm-global
 
 # Add NPM global to PATH.
