@@ -1,5 +1,6 @@
 ARG VARIANT=22.14-bookworm
-FROM node:${VARIANT}
+# FROM node:${VARIANT}
+FROM node:22.14-bookworm
 
 ARG USERNAME=root
 ARG NPM_GLOBAL=/usr/local/share/npm-global
